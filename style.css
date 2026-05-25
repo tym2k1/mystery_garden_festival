@@ -71,6 +71,7 @@ nav {
   font-family: var(--font-body);
   text-align: center;
   gap: 12px;
+  line-height: 1.6;
   margin: 16px 0 32px;
 }
 
@@ -91,7 +92,66 @@ nav a.current {
   border-bottom: 1px solid currentColor;
 }
 
-/* ===== Blocks ===== */
+/* Rules list */
+
+.rules-list {
+  counter-reset: rule;
+  list-style: none;
+  padding: 0;
+}
+
+.rules-list li {
+  counter-increment: rule;
+  position: relative;
+  padding-left: 5rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-body);
+}
+
+.rules-list li::before {
+  content: counter(rule, upper-roman) ".";
+
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 4rem;
+  text-align: right;
+}
+
+/* Schedule */
+
+.table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #111;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  text-align: center;
+}
+
+.schedule-table th {
+  font-family: var(--font-display);
+    font-size: 1.5rem;
+  font-weight: 400;
+  padding: 12px 8px;
+  border-bottom: 1px solid #111;
+}
+
+.schedule-table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+.schedule-table td:first-child {
+  white-space: nowrap;
+}
+
+/* Blocks */
 
 .card {
   padding: 16px;
@@ -99,7 +159,7 @@ nav a.current {
   margin: 16px 0;
 }
 
-/* ===== Mobile tweaks ===== */
+/* Mobile tweaks */
 
 @media (max-width: 600px) {
   .page {
