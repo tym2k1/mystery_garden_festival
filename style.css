@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  background: #f4f1ea;
+}
+
+/* Layout */
+
+.page {
+  min-height: 100vh;
+  padding: 48px 24px;
+}
+
+.container {
+  width: 680px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Typography */
+
+@font-face {
+  font-family: "Lithops";
+  src: url("./assets/fonts/Lithops-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Compagnon";
+  src: url("./assets/fonts/Compagnon-Roman.woff2") format("woff2");
+}
+
+:root {
+  --font-display: "Lithops", system-ui, sans-serif;
+  --font-body: "Compagnon", system-ui, sans-serif;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 10vw, 7rem);
+  max-width: 10ch;
+  line-height: 1.05;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto 24px auto;
+}
+
+h2 {
+  font-family: var(--font-body);
+  font-weight: 300;
+  margin: 32px 0 12px;
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+/* Navigation */
+
+nav {
+  font-family: var(--font-body);
+  text-align: center;
+  gap: 12px;
+  margin: 16px 0 32px;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+
+nav a:hover:not(.current) {
+  opacity: 0.6;
+}
+
+nav a.current {
+  font-style: italic;
+  font-weight: 600;
+  border-bottom: 1px solid currentColor;
+}
+
+/* ===== Blocks ===== */
+
+.card {
+  padding: 16px;
+  border: 1px solid #111;
+  margin: 16px 0;
+}
+
+/* ===== Mobile tweaks ===== */
+
+@media (max-width: 600px) {
+  .page {
+    padding: 16px 12px;
+  }
+}
