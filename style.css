@@ -103,6 +103,74 @@ p {
   margin: 0 0 12px;
 }
 
+/* Rotator Eye-candy */
+.rotator {
+  --count: 6;
+  --step: 2.4s;
+  --offset: 0s;
+  --duration: calc(var(--count) * var(--step));
+
+  display: inline-block;
+  position: relative;
+  height: 1.05em;
+  width: 10ch;
+  vertical-align: bottom;
+}
+
+.rotator span {
+  --i: 0;
+
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  animation:
+    fadeWords var(--duration) infinite;
+  animation-delay:
+    calc(var(--i) * var(--step) + var(--offset));
+}
+
+
+/* first rotator: 5 words */
+.rotator:nth-of-type(1) {
+  --count: 5;
+  --step: 2.4s;
+  --offset: 0s;
+}
+
+/* second rotator: different "meter" */
+.rotator:nth-of-type(2) {
+  --count: 5;
+  --step: 2.75s;
+  --offset: 0.7s;
+}
+
+
+/* automatic indexing */
+.rotator span:nth-child(1) { --i: 0; }
+.rotator span:nth-child(2) { --i: 1; }
+.rotator span:nth-child(3) { --i: 2; }
+.rotator span:nth-child(4) { --i: 3; }
+.rotator span:nth-child(5) { --i: 4; }
+
+
+@keyframes fadeWords {
+  0%, 15% {
+    opacity: 0;
+  }
+
+  20%, 35% {
+    opacity: 1;
+  }
+
+  40%, 100% {
+    opacity: 0;
+  }
+}
+
 /* Navigation */
 
 nav {
