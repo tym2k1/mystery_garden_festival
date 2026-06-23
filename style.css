@@ -3,7 +3,8 @@
 }
 
 :root {
-  --font-display: "Lithops", system-ui, sans-serif;
+  --font-header: "Lithops";
+  --font-embelished: "Lithops", system-ui, sans-serif;
   --font-body: "Compagnon", system-ui, sans-serif;
   --paper: #f4f1ea;
   --cyanotype-blue: #0f3463;
@@ -76,7 +77,7 @@ html::before {
 }
 
 h1 {
-  font-family: var(--font-display);
+  font-family: var(--font-header);
   font-size: clamp(2rem, 15vw, 7rem);
   max-width: 10ch;
   line-height: 1.05;
@@ -252,7 +253,7 @@ nav a.current {
 }
 
 .schedule-table th {
-  font-family: var(--font-display);
+  font-family: var(--font-embelished);
     font-size: 1.5rem;
   font-weight: 400;
   padding: 12px 8px;
