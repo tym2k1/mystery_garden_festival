@@ -239,7 +239,7 @@ nav a.current {
       to right,
       transparent,
       black 8px,
-      black calc(100% - 16px),
+      black calc(100% - 6px),
       transparent
     );
 }
