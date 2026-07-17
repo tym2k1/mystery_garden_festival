@@ -292,3 +292,21 @@ nav a.current {
     padding: 16px 12px;
   }
 }
+
+
+
+/* Ornament 
+.ornament-divider {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+  line-height: 0;
+}
+
+.ornament-divider img {
+  width: 220px;
+  max-width: 80%;
+  transform: scaleX(2);
+  display: block;
+}
+  */

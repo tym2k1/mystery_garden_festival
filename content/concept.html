@@ -43,6 +43,7 @@
             </nav>
 
             <div class="card">
+
                 <p>(English version below)</p>
                 <p>
                     Die Kinder der Mama Morgana wollen gemeinsam mit den Kollektiven TEOS, Exhaust the Emptiness und
@@ -68,8 +69,9 @@
                     möglich gewesen.
                 </p>
 
-
                 <hr>
+                <p>𓆝 𓆟 𓆞 𓆝 𓆟 𓆞 𓆝 𓆟 𓆝 𓆟 𓆞 𓆝 𓆟 𓆞 𓆝 𓆟</p>
+
                 <p>English version:</p>
                 <p>
                     The children of Mama Morgana, together with the collectives TEOS, Exhaust the Emptiness, and
@@ -97,9 +99,18 @@
                     Without you, this would not have been possible.
                 </p>
             </div>
-
+            <pre id="ascii-art"></pre>
         </div>
     </div>
 </body>
+
+// script for spiral ascii art
+<script>
+    fetch("../assets/art/spiral-norm.txt")
+        .then(response => response.text())
+        .then(text => {
+            document.getElementById("ascii-art").textContent = text;
+        });
+</script>
 
 </html>
