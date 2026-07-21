@@ -104,6 +104,11 @@ p {
   margin: 0 0 12px;
 }
 
+a {
+  color: var(--cyanotype-blue);
+  text-decoration: none;
+}
+
 /* Rotator Eye-candy */
 .rotator {
   --count: 6;
